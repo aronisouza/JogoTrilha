@@ -1,4 +1,4 @@
-﻿namespace TrilhaIA
+﻿namespace Trilha
 {
     class Tabuleiro
     {

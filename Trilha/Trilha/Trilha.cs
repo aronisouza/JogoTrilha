@@ -35,6 +35,8 @@ namespace Trilha
         }
         #endregion
 
+        //:: Instância a classe tabuleiro
+        Tabuleiro nvTabuleiro = new Tabuleiro();
 
     }
 }
