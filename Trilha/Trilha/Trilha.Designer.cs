@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Trilha));
             this.btIniciarJogo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.btClose = new System.Windows.Forms.Label();
             this.lbStatus = new System.Windows.Forms.Label();
             this.cmDireito = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.modoDeJogoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,7 +42,34 @@
             this.resetarJogo = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.pp9 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pbPecaDaVez = new System.Windows.Forms.PictureBox();
+            this.pb7d = new System.Windows.Forms.PictureBox();
+            this.pb5f = new System.Windows.Forms.PictureBox();
+            this.pb5m = new System.Windows.Forms.PictureBox();
+            this.pb5d = new System.Windows.Forms.PictureBox();
+            this.pb6f = new System.Windows.Forms.PictureBox();
+            this.pb8d = new System.Windows.Forms.PictureBox();
+            this.pb4f = new System.Windows.Forms.PictureBox();
+            this.pb7f = new System.Windows.Forms.PictureBox();
+            this.pb8f = new System.Windows.Forms.PictureBox();
+            this.pb8m = new System.Windows.Forms.PictureBox();
+            this.pb4m = new System.Windows.Forms.PictureBox();
+            this.pb4d = new System.Windows.Forms.PictureBox();
+            this.pb6m = new System.Windows.Forms.PictureBox();
+            this.pb7m = new System.Windows.Forms.PictureBox();
+            this.pb1m = new System.Windows.Forms.PictureBox();
+            this.pb1d = new System.Windows.Forms.PictureBox();
+            this.pb3f = new System.Windows.Forms.PictureBox();
+            this.pb3m = new System.Windows.Forms.PictureBox();
+            this.pb3d = new System.Windows.Forms.PictureBox();
+            this.pb6d = new System.Windows.Forms.PictureBox();
+            this.pb2d = new System.Windows.Forms.PictureBox();
+            this.pb2m = new System.Windows.Forms.PictureBox();
+            this.pb2f = new System.Windows.Forms.PictureBox();
+            this.pb1f = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnBorda = new System.Windows.Forms.Panel();
             this.pp6 = new System.Windows.Forms.PictureBox();
             this.pp5 = new System.Windows.Forms.PictureBox();
@@ -78,37 +105,37 @@
             this.pp7 = new System.Windows.Forms.PictureBox();
             this.pontP3 = new System.Windows.Forms.PictureBox();
             this.pb7 = new System.Windows.Forms.PictureBox();
-            this.pbPecaDaVez = new System.Windows.Forms.PictureBox();
-            this.pb7d = new System.Windows.Forms.PictureBox();
-            this.pb5f = new System.Windows.Forms.PictureBox();
-            this.pb5m = new System.Windows.Forms.PictureBox();
-            this.pb5d = new System.Windows.Forms.PictureBox();
-            this.pb6f = new System.Windows.Forms.PictureBox();
-            this.pb8d = new System.Windows.Forms.PictureBox();
-            this.pb4f = new System.Windows.Forms.PictureBox();
-            this.pb7f = new System.Windows.Forms.PictureBox();
-            this.pb8f = new System.Windows.Forms.PictureBox();
-            this.pb8m = new System.Windows.Forms.PictureBox();
-            this.pb4m = new System.Windows.Forms.PictureBox();
-            this.pb4d = new System.Windows.Forms.PictureBox();
-            this.pb6m = new System.Windows.Forms.PictureBox();
-            this.pb7m = new System.Windows.Forms.PictureBox();
-            this.pb1m = new System.Windows.Forms.PictureBox();
-            this.pb1d = new System.Windows.Forms.PictureBox();
-            this.pb3f = new System.Windows.Forms.PictureBox();
-            this.pb3m = new System.Windows.Forms.PictureBox();
-            this.pb3d = new System.Windows.Forms.PictureBox();
-            this.pb6d = new System.Windows.Forms.PictureBox();
-            this.pb2d = new System.Windows.Forms.PictureBox();
-            this.pb2m = new System.Windows.Forms.PictureBox();
-            this.pb2f = new System.Windows.Forms.PictureBox();
-            this.pb1f = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pb1 = new System.Windows.Forms.PictureBox();
-            this.pp9 = new System.Windows.Forms.PictureBox();
             this.cmDireito.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pp9)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPecaDaVez)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb7d)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb5f)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb5m)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb5d)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb6f)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb8d)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4f)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb7f)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb8f)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb8m)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4m)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4d)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb6m)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb7m)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1m)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1d)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3f)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3m)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3d)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb6d)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2d)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2m)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2f)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1f)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnBorda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pp6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pp5)).BeginInit();
@@ -144,34 +171,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pp7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pontP3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPecaDaVez)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb7d)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb5f)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb5m)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb5d)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb6f)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb8d)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb4f)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb7f)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb8f)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb8m)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb4m)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb4d)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb6m)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb7m)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb1m)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb1d)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb3f)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb3m)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb3d)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb6d)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb2d)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb2m)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb2f)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb1f)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pp9)).BeginInit();
             this.SuspendLayout();
             // 
             // btIniciarJogo
@@ -182,6 +182,7 @@
             this.btIniciarJogo.TabIndex = 38;
             this.btIniciarJogo.Text = "Iniciar";
             this.btIniciarJogo.UseVisualStyleBackColor = true;
+            this.btIniciarJogo.Click += new System.EventHandler(this.btIniciarJogo_Click);
             // 
             // label1
             // 
@@ -194,18 +195,19 @@
             this.label1.TabIndex = 37;
             this.label1.Text = "Quem Joga";
             // 
-            // label3
+            // btClose
             // 
-            this.label3.BackColor = System.Drawing.Color.Firebrick;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(706, 2);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 39);
-            this.label3.TabIndex = 106;
-            this.label3.Text = "X";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btClose.BackColor = System.Drawing.Color.Firebrick;
+            this.btClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btClose.ForeColor = System.Drawing.Color.Black;
+            this.btClose.Location = new System.Drawing.Point(706, 2);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(38, 39);
+            this.btClose.TabIndex = 106;
+            this.btClose.Text = "X";
+            this.btClose.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
             // lbStatus
             // 
@@ -221,6 +223,7 @@
             this.lbStatus.TabIndex = 105;
             this.lbStatus.Text = "Status : Esperando inicio";
             this.lbStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbStatus.MouseDown += new System.Windows.Forms.MouseEventHandler(this.moveJ);
             // 
             // cmDireito
             // 
@@ -246,12 +249,14 @@
             this.contraComputadorOp.Name = "contraComputadorOp";
             this.contraComputadorOp.Size = new System.Drawing.Size(181, 22);
             this.contraComputadorOp.Text = "Contra Computador";
+            this.contraComputadorOp.Click += new System.EventHandler(this.contraComputadorOp_Click);
             // 
             // contraPessoaOp
             // 
             this.contraPessoaOp.Name = "contraPessoaOp";
             this.contraPessoaOp.Size = new System.Drawing.Size(181, 22);
             this.contraPessoaOp.Text = "Contra Pessoa";
+            this.contraPessoaOp.Click += new System.EventHandler(this.contraPessoaOp_Click);
             // 
             // toolStripSeparator1
             // 
@@ -264,6 +269,7 @@
             this.resetarJogo.Name = "resetarJogo";
             this.resetarJogo.Size = new System.Drawing.Size(181, 22);
             this.resetarJogo.Text = "RESETAR O JOGO";
+            this.resetarJogo.Click += new System.EventHandler(this.resetarJogo_Click);
             // 
             // panel2
             // 
@@ -284,6 +290,19 @@
             this.label2.Text = "Objetivo - Deixar o adversário com 2 peças no tabuleiro ou deixá-lo sem movimento" +
     "s.";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pp9
+            // 
+            this.pp9.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pp9.ErrorImage = null;
+            this.pp9.Image = ((System.Drawing.Image)(resources.GetObject("pp9.Image")));
+            this.pp9.Location = new System.Drawing.Point(706, 273);
+            this.pp9.Name = "pp9";
+            this.pp9.Size = new System.Drawing.Size(30, 28);
+            this.pp9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pp9.TabIndex = 65;
+            this.pp9.TabStop = false;
+            this.pp9.Tag = "v";
             // 
             // panel1
             // 
@@ -319,6 +338,340 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(662, 676);
             this.panel1.TabIndex = 69;
+            // 
+            // pbPecaDaVez
+            // 
+            this.pbPecaDaVez.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pbPecaDaVez.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPecaDaVez.ErrorImage = null;
+            this.pbPecaDaVez.Image = global::Trilha.Properties.Resources.preto;
+            this.pbPecaDaVez.Location = new System.Drawing.Point(278, 313);
+            this.pbPecaDaVez.Name = "pbPecaDaVez";
+            this.pbPecaDaVez.Size = new System.Drawing.Size(98, 87);
+            this.pbPecaDaVez.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbPecaDaVez.TabIndex = 36;
+            this.pbPecaDaVez.TabStop = false;
+            this.pbPecaDaVez.Tag = "v";
+            // 
+            // pb7d
+            // 
+            this.pb7d.BackColor = System.Drawing.Color.Lime;
+            this.pb7d.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.pb7d.Location = new System.Drawing.Point(205, 446);
+            this.pb7d.Name = "pb7d";
+            this.pb7d.Size = new System.Drawing.Size(34, 33);
+            this.pb7d.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb7d.TabIndex = 3;
+            this.pb7d.TabStop = false;
+            this.pb7d.Tag = "v";
+            // 
+            // pb5f
+            // 
+            this.pb5f.BackColor = System.Drawing.Color.Lime;
+            this.pb5f.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.pb5f.ErrorImage = null;
+            this.pb5f.Location = new System.Drawing.Point(599, 624);
+            this.pb5f.Name = "pb5f";
+            this.pb5f.Size = new System.Drawing.Size(34, 33);
+            this.pb5f.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb5f.TabIndex = 3;
+            this.pb5f.TabStop = false;
+            this.pb5f.Tag = "v";
+            // 
+            // pb5m
+            // 
+            this.pb5m.BackColor = System.Drawing.Color.Lime;
+            this.pb5m.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.pb5m.ErrorImage = null;
+            this.pb5m.Location = new System.Drawing.Point(510, 535);
+            this.pb5m.Name = "pb5m";
+            this.pb5m.Size = new System.Drawing.Size(34, 33);
+            this.pb5m.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb5m.TabIndex = 3;
+            this.pb5m.TabStop = false;
+            this.pb5m.Tag = "v";
+            // 
+            // pb5d
+            // 
+            this.pb5d.BackColor = System.Drawing.Color.Lime;
+            this.pb5d.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.pb5d.Location = new System.Drawing.Point(418, 445);
+            this.pb5d.Name = "pb5d";
+            this.pb5d.Size = new System.Drawing.Size(34, 33);
+            this.pb5d.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb5d.TabIndex = 3;
+            this.pb5d.TabStop = false;
+            this.pb5d.Tag = "v";
+            // 
+            // pb6f
+            // 
+            this.pb6f.BackColor = System.Drawing.Color.Lime;
+            this.pb6f.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.pb6f.ErrorImage = null;
+            this.pb6f.Location = new System.Drawing.Point(312, 624);
+            this.pb6f.Name = "pb6f";
+            this.pb6f.Size = new System.Drawing.Size(34, 33);
+            this.pb6f.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb6f.TabIndex = 3;
+            this.pb6f.TabStop = false;
+            this.pb6f.Tag = "v";
+            // 
+            // pb8d
+            // 
+            this.pb8d.BackColor = System.Drawing.Color.Lime;
+            this.pb8d.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.pb8d.ErrorImage = null;
+            this.pb8d.Location = new System.Drawing.Point(205, 341);
+            this.pb8d.Name = "pb8d";
+            this.pb8d.Size = new System.Drawing.Size(34, 33);
+            this.pb8d.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb8d.TabIndex = 3;
+            this.pb8d.TabStop = false;
+            this.pb8d.Tag = "v";
+            // 
+            // pb4f
+            // 
+            this.pb4f.BackColor = System.Drawing.Color.Lime;
+            this.pb4f.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.pb4f.ErrorImage = null;
+            this.pb4f.Location = new System.Drawing.Point(601, 340);
+            this.pb4f.Name = "pb4f";
+            this.pb4f.Size = new System.Drawing.Size(34, 33);
+            this.pb4f.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb4f.TabIndex = 3;
+            this.pb4f.TabStop = false;
+            this.pb4f.Tag = "v";
+            // 
+            // pb7f
+            // 
+            this.pb7f.BackColor = System.Drawing.Color.Lime;
+            this.pb7f.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.pb7f.ErrorImage = null;
+            this.pb7f.Location = new System.Drawing.Point(22, 624);
+            this.pb7f.Name = "pb7f";
+            this.pb7f.Size = new System.Drawing.Size(34, 33);
+            this.pb7f.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb7f.TabIndex = 3;
+            this.pb7f.TabStop = false;
+            this.pb7f.Tag = "v";
+            // 
+            // pb8f
+            // 
+            this.pb8f.BackColor = System.Drawing.Color.Lime;
+            this.pb8f.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.pb8f.ErrorImage = null;
+            this.pb8f.Location = new System.Drawing.Point(21, 340);
+            this.pb8f.Name = "pb8f";
+            this.pb8f.Size = new System.Drawing.Size(34, 33);
+            this.pb8f.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb8f.TabIndex = 3;
+            this.pb8f.TabStop = false;
+            this.pb8f.Tag = "v";
+            // 
+            // pb8m
+            // 
+            this.pb8m.BackColor = System.Drawing.Color.Lime;
+            this.pb8m.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.pb8m.ErrorImage = null;
+            this.pb8m.Location = new System.Drawing.Point(112, 339);
+            this.pb8m.Name = "pb8m";
+            this.pb8m.Size = new System.Drawing.Size(34, 33);
+            this.pb8m.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb8m.TabIndex = 3;
+            this.pb8m.TabStop = false;
+            this.pb8m.Tag = "v";
+            // 
+            // pb4m
+            // 
+            this.pb4m.BackColor = System.Drawing.Color.Lime;
+            this.pb4m.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.pb4m.ErrorImage = null;
+            this.pb4m.Location = new System.Drawing.Point(509, 340);
+            this.pb4m.Name = "pb4m";
+            this.pb4m.Size = new System.Drawing.Size(34, 33);
+            this.pb4m.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb4m.TabIndex = 3;
+            this.pb4m.TabStop = false;
+            this.pb4m.Tag = "v";
+            // 
+            // pb4d
+            // 
+            this.pb4d.BackColor = System.Drawing.Color.Lime;
+            this.pb4d.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.pb4d.Location = new System.Drawing.Point(418, 340);
+            this.pb4d.Name = "pb4d";
+            this.pb4d.Size = new System.Drawing.Size(34, 33);
+            this.pb4d.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb4d.TabIndex = 3;
+            this.pb4d.TabStop = false;
+            this.pb4d.Tag = "v";
+            // 
+            // pb6m
+            // 
+            this.pb6m.BackColor = System.Drawing.Color.Lime;
+            this.pb6m.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.pb6m.ErrorImage = null;
+            this.pb6m.Location = new System.Drawing.Point(310, 536);
+            this.pb6m.Name = "pb6m";
+            this.pb6m.Size = new System.Drawing.Size(34, 33);
+            this.pb6m.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb6m.TabIndex = 3;
+            this.pb6m.TabStop = false;
+            this.pb6m.Tag = "v";
+            // 
+            // pb7m
+            // 
+            this.pb7m.BackColor = System.Drawing.Color.Lime;
+            this.pb7m.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.pb7m.ErrorImage = null;
+            this.pb7m.Location = new System.Drawing.Point(113, 535);
+            this.pb7m.Name = "pb7m";
+            this.pb7m.Size = new System.Drawing.Size(34, 33);
+            this.pb7m.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb7m.TabIndex = 3;
+            this.pb7m.TabStop = false;
+            this.pb7m.Tag = "v";
+            // 
+            // pb1m
+            // 
+            this.pb1m.BackColor = System.Drawing.Color.Lime;
+            this.pb1m.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.pb1m.ErrorImage = null;
+            this.pb1m.Location = new System.Drawing.Point(113, 144);
+            this.pb1m.Name = "pb1m";
+            this.pb1m.Size = new System.Drawing.Size(34, 33);
+            this.pb1m.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb1m.TabIndex = 3;
+            this.pb1m.TabStop = false;
+            this.pb1m.Tag = "v";
+            // 
+            // pb1d
+            // 
+            this.pb1d.BackColor = System.Drawing.Color.Lime;
+            this.pb1d.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.pb1d.ErrorImage = null;
+            this.pb1d.Location = new System.Drawing.Point(204, 234);
+            this.pb1d.Name = "pb1d";
+            this.pb1d.Size = new System.Drawing.Size(34, 33);
+            this.pb1d.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb1d.TabIndex = 3;
+            this.pb1d.TabStop = false;
+            this.pb1d.Tag = "v";
+            // 
+            // pb3f
+            // 
+            this.pb3f.BackColor = System.Drawing.Color.Lime;
+            this.pb3f.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.pb3f.ErrorImage = null;
+            this.pb3f.Location = new System.Drawing.Point(601, 54);
+            this.pb3f.Name = "pb3f";
+            this.pb3f.Size = new System.Drawing.Size(34, 33);
+            this.pb3f.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb3f.TabIndex = 3;
+            this.pb3f.TabStop = false;
+            this.pb3f.Tag = "v";
+            // 
+            // pb3m
+            // 
+            this.pb3m.BackColor = System.Drawing.Color.Lime;
+            this.pb3m.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.pb3m.ErrorImage = null;
+            this.pb3m.Location = new System.Drawing.Point(509, 144);
+            this.pb3m.Name = "pb3m";
+            this.pb3m.Size = new System.Drawing.Size(34, 33);
+            this.pb3m.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb3m.TabIndex = 3;
+            this.pb3m.TabStop = false;
+            this.pb3m.Tag = "v";
+            // 
+            // pb3d
+            // 
+            this.pb3d.BackColor = System.Drawing.Color.Lime;
+            this.pb3d.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.pb3d.ErrorImage = null;
+            this.pb3d.Location = new System.Drawing.Point(418, 234);
+            this.pb3d.Name = "pb3d";
+            this.pb3d.Size = new System.Drawing.Size(34, 33);
+            this.pb3d.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb3d.TabIndex = 3;
+            this.pb3d.TabStop = false;
+            this.pb3d.Tag = "v";
+            // 
+            // pb6d
+            // 
+            this.pb6d.BackColor = System.Drawing.Color.Lime;
+            this.pb6d.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.pb6d.Location = new System.Drawing.Point(311, 446);
+            this.pb6d.Name = "pb6d";
+            this.pb6d.Size = new System.Drawing.Size(34, 33);
+            this.pb6d.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb6d.TabIndex = 3;
+            this.pb6d.TabStop = false;
+            this.pb6d.Tag = "v";
+            // 
+            // pb2d
+            // 
+            this.pb2d.BackColor = System.Drawing.Color.Lime;
+            this.pb2d.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.pb2d.ErrorImage = null;
+            this.pb2d.Location = new System.Drawing.Point(311, 235);
+            this.pb2d.Name = "pb2d";
+            this.pb2d.Size = new System.Drawing.Size(34, 33);
+            this.pb2d.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb2d.TabIndex = 3;
+            this.pb2d.TabStop = false;
+            this.pb2d.Tag = "v";
+            // 
+            // pb2m
+            // 
+            this.pb2m.BackColor = System.Drawing.Color.Lime;
+            this.pb2m.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.pb2m.ErrorImage = null;
+            this.pb2m.Location = new System.Drawing.Point(312, 144);
+            this.pb2m.Name = "pb2m";
+            this.pb2m.Size = new System.Drawing.Size(34, 33);
+            this.pb2m.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb2m.TabIndex = 3;
+            this.pb2m.TabStop = false;
+            this.pb2m.Tag = "v";
+            // 
+            // pb2f
+            // 
+            this.pb2f.BackColor = System.Drawing.Color.Lime;
+            this.pb2f.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.pb2f.ErrorImage = null;
+            this.pb2f.Location = new System.Drawing.Point(311, 54);
+            this.pb2f.Name = "pb2f";
+            this.pb2f.Size = new System.Drawing.Size(34, 33);
+            this.pb2f.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb2f.TabIndex = 3;
+            this.pb2f.TabStop = false;
+            this.pb2f.Tag = "v";
+            // 
+            // pb1f
+            // 
+            this.pb1f.BackColor = System.Drawing.Color.Lime;
+            this.pb1f.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.pb1f.ErrorImage = null;
+            this.pb1f.Location = new System.Drawing.Point(22, 54);
+            this.pb1f.Name = "pb1f";
+            this.pb1f.Size = new System.Drawing.Size(34, 33);
+            this.pb1f.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb1f.TabIndex = 2;
+            this.pb1f.TabStop = false;
+            this.pb1f.Tag = "v";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox1.Image = global::Trilha.Properties.Resources.Trilha;
+            this.pictureBox1.Location = new System.Drawing.Point(-27, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(711, 701);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // pnBorda
             // 
@@ -790,339 +1143,6 @@
             this.pb7.TabStop = false;
             this.pb7.Tag = "v";
             // 
-            // pbPecaDaVez
-            // 
-            this.pbPecaDaVez.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pbPecaDaVez.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbPecaDaVez.ErrorImage = null;
-            this.pbPecaDaVez.Location = new System.Drawing.Point(278, 313);
-            this.pbPecaDaVez.Name = "pbPecaDaVez";
-            this.pbPecaDaVez.Size = new System.Drawing.Size(98, 87);
-            this.pbPecaDaVez.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbPecaDaVez.TabIndex = 36;
-            this.pbPecaDaVez.TabStop = false;
-            this.pbPecaDaVez.Tag = "v";
-            // 
-            // pb7d
-            // 
-            this.pb7d.BackColor = System.Drawing.Color.Lime;
-            this.pb7d.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.pb7d.Location = new System.Drawing.Point(205, 446);
-            this.pb7d.Name = "pb7d";
-            this.pb7d.Size = new System.Drawing.Size(34, 33);
-            this.pb7d.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb7d.TabIndex = 3;
-            this.pb7d.TabStop = false;
-            this.pb7d.Tag = "v";
-            // 
-            // pb5f
-            // 
-            this.pb5f.BackColor = System.Drawing.Color.Lime;
-            this.pb5f.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.pb5f.ErrorImage = null;
-            this.pb5f.Location = new System.Drawing.Point(599, 624);
-            this.pb5f.Name = "pb5f";
-            this.pb5f.Size = new System.Drawing.Size(34, 33);
-            this.pb5f.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb5f.TabIndex = 3;
-            this.pb5f.TabStop = false;
-            this.pb5f.Tag = "v";
-            // 
-            // pb5m
-            // 
-            this.pb5m.BackColor = System.Drawing.Color.Lime;
-            this.pb5m.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.pb5m.ErrorImage = null;
-            this.pb5m.Location = new System.Drawing.Point(510, 535);
-            this.pb5m.Name = "pb5m";
-            this.pb5m.Size = new System.Drawing.Size(34, 33);
-            this.pb5m.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb5m.TabIndex = 3;
-            this.pb5m.TabStop = false;
-            this.pb5m.Tag = "v";
-            // 
-            // pb5d
-            // 
-            this.pb5d.BackColor = System.Drawing.Color.Lime;
-            this.pb5d.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.pb5d.Location = new System.Drawing.Point(418, 445);
-            this.pb5d.Name = "pb5d";
-            this.pb5d.Size = new System.Drawing.Size(34, 33);
-            this.pb5d.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb5d.TabIndex = 3;
-            this.pb5d.TabStop = false;
-            this.pb5d.Tag = "v";
-            // 
-            // pb6f
-            // 
-            this.pb6f.BackColor = System.Drawing.Color.Lime;
-            this.pb6f.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.pb6f.ErrorImage = null;
-            this.pb6f.Location = new System.Drawing.Point(312, 624);
-            this.pb6f.Name = "pb6f";
-            this.pb6f.Size = new System.Drawing.Size(34, 33);
-            this.pb6f.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb6f.TabIndex = 3;
-            this.pb6f.TabStop = false;
-            this.pb6f.Tag = "v";
-            // 
-            // pb8d
-            // 
-            this.pb8d.BackColor = System.Drawing.Color.Lime;
-            this.pb8d.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.pb8d.ErrorImage = null;
-            this.pb8d.Location = new System.Drawing.Point(205, 341);
-            this.pb8d.Name = "pb8d";
-            this.pb8d.Size = new System.Drawing.Size(34, 33);
-            this.pb8d.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb8d.TabIndex = 3;
-            this.pb8d.TabStop = false;
-            this.pb8d.Tag = "v";
-            // 
-            // pb4f
-            // 
-            this.pb4f.BackColor = System.Drawing.Color.Lime;
-            this.pb4f.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.pb4f.ErrorImage = null;
-            this.pb4f.Location = new System.Drawing.Point(601, 340);
-            this.pb4f.Name = "pb4f";
-            this.pb4f.Size = new System.Drawing.Size(34, 33);
-            this.pb4f.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb4f.TabIndex = 3;
-            this.pb4f.TabStop = false;
-            this.pb4f.Tag = "v";
-            // 
-            // pb7f
-            // 
-            this.pb7f.BackColor = System.Drawing.Color.Lime;
-            this.pb7f.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.pb7f.ErrorImage = null;
-            this.pb7f.Location = new System.Drawing.Point(22, 624);
-            this.pb7f.Name = "pb7f";
-            this.pb7f.Size = new System.Drawing.Size(34, 33);
-            this.pb7f.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb7f.TabIndex = 3;
-            this.pb7f.TabStop = false;
-            this.pb7f.Tag = "v";
-            // 
-            // pb8f
-            // 
-            this.pb8f.BackColor = System.Drawing.Color.Lime;
-            this.pb8f.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.pb8f.ErrorImage = null;
-            this.pb8f.Location = new System.Drawing.Point(21, 340);
-            this.pb8f.Name = "pb8f";
-            this.pb8f.Size = new System.Drawing.Size(34, 33);
-            this.pb8f.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb8f.TabIndex = 3;
-            this.pb8f.TabStop = false;
-            this.pb8f.Tag = "v";
-            // 
-            // pb8m
-            // 
-            this.pb8m.BackColor = System.Drawing.Color.Lime;
-            this.pb8m.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.pb8m.ErrorImage = null;
-            this.pb8m.Location = new System.Drawing.Point(112, 339);
-            this.pb8m.Name = "pb8m";
-            this.pb8m.Size = new System.Drawing.Size(34, 33);
-            this.pb8m.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb8m.TabIndex = 3;
-            this.pb8m.TabStop = false;
-            this.pb8m.Tag = "v";
-            // 
-            // pb4m
-            // 
-            this.pb4m.BackColor = System.Drawing.Color.Lime;
-            this.pb4m.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.pb4m.ErrorImage = null;
-            this.pb4m.Location = new System.Drawing.Point(509, 340);
-            this.pb4m.Name = "pb4m";
-            this.pb4m.Size = new System.Drawing.Size(34, 33);
-            this.pb4m.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb4m.TabIndex = 3;
-            this.pb4m.TabStop = false;
-            this.pb4m.Tag = "v";
-            // 
-            // pb4d
-            // 
-            this.pb4d.BackColor = System.Drawing.Color.Lime;
-            this.pb4d.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.pb4d.Location = new System.Drawing.Point(418, 340);
-            this.pb4d.Name = "pb4d";
-            this.pb4d.Size = new System.Drawing.Size(34, 33);
-            this.pb4d.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb4d.TabIndex = 3;
-            this.pb4d.TabStop = false;
-            this.pb4d.Tag = "v";
-            // 
-            // pb6m
-            // 
-            this.pb6m.BackColor = System.Drawing.Color.Lime;
-            this.pb6m.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.pb6m.ErrorImage = null;
-            this.pb6m.Location = new System.Drawing.Point(310, 536);
-            this.pb6m.Name = "pb6m";
-            this.pb6m.Size = new System.Drawing.Size(34, 33);
-            this.pb6m.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb6m.TabIndex = 3;
-            this.pb6m.TabStop = false;
-            this.pb6m.Tag = "v";
-            // 
-            // pb7m
-            // 
-            this.pb7m.BackColor = System.Drawing.Color.Lime;
-            this.pb7m.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.pb7m.ErrorImage = null;
-            this.pb7m.Location = new System.Drawing.Point(113, 535);
-            this.pb7m.Name = "pb7m";
-            this.pb7m.Size = new System.Drawing.Size(34, 33);
-            this.pb7m.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb7m.TabIndex = 3;
-            this.pb7m.TabStop = false;
-            this.pb7m.Tag = "v";
-            // 
-            // pb1m
-            // 
-            this.pb1m.BackColor = System.Drawing.Color.Lime;
-            this.pb1m.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.pb1m.ErrorImage = null;
-            this.pb1m.Location = new System.Drawing.Point(113, 144);
-            this.pb1m.Name = "pb1m";
-            this.pb1m.Size = new System.Drawing.Size(34, 33);
-            this.pb1m.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb1m.TabIndex = 3;
-            this.pb1m.TabStop = false;
-            this.pb1m.Tag = "v";
-            // 
-            // pb1d
-            // 
-            this.pb1d.BackColor = System.Drawing.Color.Lime;
-            this.pb1d.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.pb1d.ErrorImage = null;
-            this.pb1d.Location = new System.Drawing.Point(204, 234);
-            this.pb1d.Name = "pb1d";
-            this.pb1d.Size = new System.Drawing.Size(34, 33);
-            this.pb1d.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb1d.TabIndex = 3;
-            this.pb1d.TabStop = false;
-            this.pb1d.Tag = "v";
-            // 
-            // pb3f
-            // 
-            this.pb3f.BackColor = System.Drawing.Color.Lime;
-            this.pb3f.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.pb3f.ErrorImage = null;
-            this.pb3f.Location = new System.Drawing.Point(601, 54);
-            this.pb3f.Name = "pb3f";
-            this.pb3f.Size = new System.Drawing.Size(34, 33);
-            this.pb3f.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb3f.TabIndex = 3;
-            this.pb3f.TabStop = false;
-            this.pb3f.Tag = "v";
-            // 
-            // pb3m
-            // 
-            this.pb3m.BackColor = System.Drawing.Color.Lime;
-            this.pb3m.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.pb3m.ErrorImage = null;
-            this.pb3m.Location = new System.Drawing.Point(509, 144);
-            this.pb3m.Name = "pb3m";
-            this.pb3m.Size = new System.Drawing.Size(34, 33);
-            this.pb3m.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb3m.TabIndex = 3;
-            this.pb3m.TabStop = false;
-            this.pb3m.Tag = "v";
-            // 
-            // pb3d
-            // 
-            this.pb3d.BackColor = System.Drawing.Color.Lime;
-            this.pb3d.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.pb3d.ErrorImage = null;
-            this.pb3d.Location = new System.Drawing.Point(418, 234);
-            this.pb3d.Name = "pb3d";
-            this.pb3d.Size = new System.Drawing.Size(34, 33);
-            this.pb3d.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb3d.TabIndex = 3;
-            this.pb3d.TabStop = false;
-            this.pb3d.Tag = "v";
-            // 
-            // pb6d
-            // 
-            this.pb6d.BackColor = System.Drawing.Color.Lime;
-            this.pb6d.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.pb6d.Location = new System.Drawing.Point(311, 446);
-            this.pb6d.Name = "pb6d";
-            this.pb6d.Size = new System.Drawing.Size(34, 33);
-            this.pb6d.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb6d.TabIndex = 3;
-            this.pb6d.TabStop = false;
-            this.pb6d.Tag = "v";
-            // 
-            // pb2d
-            // 
-            this.pb2d.BackColor = System.Drawing.Color.Lime;
-            this.pb2d.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.pb2d.ErrorImage = null;
-            this.pb2d.Location = new System.Drawing.Point(311, 235);
-            this.pb2d.Name = "pb2d";
-            this.pb2d.Size = new System.Drawing.Size(34, 33);
-            this.pb2d.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb2d.TabIndex = 3;
-            this.pb2d.TabStop = false;
-            this.pb2d.Tag = "v";
-            // 
-            // pb2m
-            // 
-            this.pb2m.BackColor = System.Drawing.Color.Lime;
-            this.pb2m.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.pb2m.ErrorImage = null;
-            this.pb2m.Location = new System.Drawing.Point(312, 144);
-            this.pb2m.Name = "pb2m";
-            this.pb2m.Size = new System.Drawing.Size(34, 33);
-            this.pb2m.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb2m.TabIndex = 3;
-            this.pb2m.TabStop = false;
-            this.pb2m.Tag = "v";
-            // 
-            // pb2f
-            // 
-            this.pb2f.BackColor = System.Drawing.Color.Lime;
-            this.pb2f.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.pb2f.ErrorImage = null;
-            this.pb2f.Location = new System.Drawing.Point(311, 54);
-            this.pb2f.Name = "pb2f";
-            this.pb2f.Size = new System.Drawing.Size(34, 33);
-            this.pb2f.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb2f.TabIndex = 3;
-            this.pb2f.TabStop = false;
-            this.pb2f.Tag = "v";
-            // 
-            // pb1f
-            // 
-            this.pb1f.BackColor = System.Drawing.Color.Lime;
-            this.pb1f.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.pb1f.ErrorImage = null;
-            this.pb1f.Location = new System.Drawing.Point(22, 54);
-            this.pb1f.Name = "pb1f";
-            this.pb1f.Size = new System.Drawing.Size(34, 33);
-            this.pb1f.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb1f.TabIndex = 2;
-            this.pb1f.TabStop = false;
-            this.pb1f.Tag = "v";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Image = global::Trilha.Properties.Resources.Trilha;
-            this.pictureBox1.Location = new System.Drawing.Point(-27, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(711, 701);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // pb1
             // 
             this.pb1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -1135,19 +1155,6 @@
             this.pb1.TabIndex = 70;
             this.pb1.TabStop = false;
             this.pb1.Tag = "v";
-            // 
-            // pp9
-            // 
-            this.pp9.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pp9.ErrorImage = null;
-            this.pp9.Image = ((System.Drawing.Image)(resources.GetObject("pp9.Image")));
-            this.pp9.Location = new System.Drawing.Point(706, 273);
-            this.pp9.Name = "pp9";
-            this.pp9.Size = new System.Drawing.Size(30, 28);
-            this.pp9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pp9.TabIndex = 65;
-            this.pp9.TabStop = false;
-            this.pp9.Tag = "v";
             // 
             // Trilha
             // 
@@ -1177,7 +1184,7 @@
             this.Controls.Add(this.pb6);
             this.Controls.Add(this.pontB5);
             this.Controls.Add(this.pontB6);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btClose);
             this.Controls.Add(this.lbStatus);
             this.Controls.Add(this.pontP1);
             this.Controls.Add(this.pp8);
@@ -1197,10 +1204,38 @@
             this.Name = "Trilha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trilha";
+            this.Load += new System.EventHandler(this.Trilha_Load);
             this.cmDireito.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pp9)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPecaDaVez)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb7d)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb5f)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb5m)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb5d)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb6f)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb8d)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4f)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb7f)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb8f)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb8m)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4m)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4d)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb6m)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb7m)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1m)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1d)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3f)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3m)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3d)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb6d)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2d)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2m)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2f)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1f)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnBorda.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pp6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pp5)).EndInit();
@@ -1236,34 +1271,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pp7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pontP3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPecaDaVez)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb7d)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb5f)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb5m)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb5d)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb6f)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb8d)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb4f)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb7f)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb8f)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb8m)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb4m)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb4d)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb6m)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb7m)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb1m)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb1d)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb3f)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb3m)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb3d)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb6d)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb2d)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb2m)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb2f)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb1f)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pp9)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1321,7 +1329,7 @@
         private System.Windows.Forms.PictureBox pontB5;
         private System.Windows.Forms.PictureBox pontB6;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label btClose;
         private System.Windows.Forms.Label lbStatus;
         private System.Windows.Forms.ContextMenuStrip cmDireito;
         private System.Windows.Forms.ToolStripMenuItem modoDeJogoToolStripMenuItem;

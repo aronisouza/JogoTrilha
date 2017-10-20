@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TrilhaIA
+namespace Trilha
 {
     class IAjoga
     {
@@ -375,20 +375,20 @@ namespace TrilhaIA
                 for (int i = 0; i < AI9pecas.Length; i++)
                 {
                     //:: 1 chegar se tem possibilidade de fazer uma trilha com essa peça
-                    if (AI9pecas[i])
-                    {
+                    //if (AI9pecas[i])
+                    //{
 
-                    }
+                   // }
                     //:: 2 checar se precisa fazer uma defesa com esa peça
 
 
                 }
                 //:: Caso não tenha defesa ou possibilidade de trilha movimenta 1ª peça disponivel
                 //:: 3 movimenta essa peça 
-                for (int i = 0; i < AI9pecas.Length; i++)
-                {
+               // for (int i = 0; i < AI9pecas.Length; i++)
+                //{
 
-                }
+               // }
                 return -1;
             }
         }
