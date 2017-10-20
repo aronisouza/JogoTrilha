@@ -49,8 +49,7 @@ namespace Trilha
         //> TRUE contra IA ligado :: FALSE para jogar com outra pessoa
         private bool contraQuem = true;
         public bool ContraQuem { get => contraQuem; set => contraQuem = value; }
-
-
+        
         //:: Mudar isso depois para atualizar apenas a peça movimentada
         //:: pra reduzir o processamento do jogo e aproveitar essa idéia
         private void AttVisualTabuleiro()

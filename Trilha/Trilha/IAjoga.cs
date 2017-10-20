@@ -8,11 +8,11 @@ namespace Trilha
         //:: Instância a classe tabuleiro
         Tabuleiro nvTabuleiro = new Tabuleiro();
 
-        //:: Guarda as posições das peças preta para jogadas rápidas
+        //:: Guarda as posições das peças pretas para jogadas rápidas
         private static int[] aI9pecas = { -1, -1, -1, -1, -1, -1, -1, -1, -1 };
         public int[] AI9pecas { get => aI9pecas; set => aI9pecas = value; }
 
-        //:: Verifica se o lugar esta vazio para movimentar peça aleatoria
+        //:: Verifica se o lugar está vazio para movimentar peça aleatória
         private int IALugarVazio(int posicao)
         {
             switch (posicao)
