@@ -35,10 +35,6 @@
             this.btClose = new System.Windows.Forms.Label();
             this.lbStatus = new System.Windows.Forms.Label();
             this.cmDireito = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.modoDeJogoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contraComputadorOp = new System.Windows.Forms.ToolStripMenuItem();
-            this.contraPessoaOp = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.resetarJogo = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -176,6 +172,7 @@
             // 
             // btIniciarJogo
             // 
+            this.btIniciarJogo.ContextMenuStrip = this.cmDireito;
             this.btIniciarJogo.Location = new System.Drawing.Point(284, 319);
             this.btIniciarJogo.Name = "btIniciarJogo";
             this.btIniciarJogo.Size = new System.Drawing.Size(86, 75);
@@ -212,7 +209,6 @@
             // lbStatus
             // 
             this.lbStatus.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.lbStatus.ContextMenuStrip = this.cmDireito;
             this.lbStatus.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.lbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStatus.ForeColor = System.Drawing.Color.Lime;
@@ -228,46 +224,16 @@
             // cmDireito
             // 
             this.cmDireito.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.modoDeJogoToolStripMenuItem,
-            this.contraComputadorOp,
-            this.contraPessoaOp,
-            this.toolStripSeparator1,
             this.resetarJogo});
             this.cmDireito.Name = "cmDireito";
-            this.cmDireito.Size = new System.Drawing.Size(182, 98);
-            // 
-            // modoDeJogoToolStripMenuItem
-            // 
-            this.modoDeJogoToolStripMenuItem.Enabled = false;
-            this.modoDeJogoToolStripMenuItem.Name = "modoDeJogoToolStripMenuItem";
-            this.modoDeJogoToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.modoDeJogoToolStripMenuItem.Text = "MODO DE JOGO";
-            // 
-            // contraComputadorOp
-            // 
-            this.contraComputadorOp.Enabled = false;
-            this.contraComputadorOp.Name = "contraComputadorOp";
-            this.contraComputadorOp.Size = new System.Drawing.Size(181, 22);
-            this.contraComputadorOp.Text = "Contra Computador";
-            this.contraComputadorOp.Click += new System.EventHandler(this.contraComputadorOp_Click);
-            // 
-            // contraPessoaOp
-            // 
-            this.contraPessoaOp.Name = "contraPessoaOp";
-            this.contraPessoaOp.Size = new System.Drawing.Size(181, 22);
-            this.contraPessoaOp.Text = "Contra Pessoa";
-            this.contraPessoaOp.Click += new System.EventHandler(this.contraPessoaOp_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(178, 6);
+            this.cmDireito.Size = new System.Drawing.Size(166, 48);
             // 
             // resetarJogo
             // 
             this.resetarJogo.Enabled = false;
+            this.resetarJogo.Image = global::Trilha.Properties.Resources.reset;
             this.resetarJogo.Name = "resetarJogo";
-            this.resetarJogo.Size = new System.Drawing.Size(181, 22);
+            this.resetarJogo.Size = new System.Drawing.Size(165, 22);
             this.resetarJogo.Text = "RESETAR O JOGO";
             this.resetarJogo.Click += new System.EventHandler(this.resetarJogo_Click);
             // 
@@ -1332,10 +1298,6 @@
         private System.Windows.Forms.Label btClose;
         private System.Windows.Forms.Label lbStatus;
         private System.Windows.Forms.ContextMenuStrip cmDireito;
-        private System.Windows.Forms.ToolStripMenuItem modoDeJogoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem contraComputadorOp;
-        private System.Windows.Forms.ToolStripMenuItem contraPessoaOp;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem resetarJogo;
         private System.Windows.Forms.PictureBox pontP1;
         private System.Windows.Forms.PictureBox pp8;

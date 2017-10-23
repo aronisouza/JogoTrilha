@@ -8,351 +8,43 @@ namespace Trilha
         //:: Instância a classe tabuleiro
         Tabuleiro nvTabuleiro = new Tabuleiro();
 
-        //:: Guarda as posições das peças pretas para jogadas rápidas
+        //:: Guarda as posições das peças preta para jogadas rápidas
+        //:: Isso será usado depois de colocar as 9 peças no tabuleiro
         private static int[] aI9pecas = { -1, -1, -1, -1, -1, -1, -1, -1, -1 };
         public int[] AI9pecas { get => aI9pecas; set => aI9pecas = value; }
 
-        //:: Verifica se o lugar está vazio para movimentar peça aleatória
-        private int IALugarVazio(int posicao)
-        {
-            switch (posicao)
-            {
-                #region Fora
-                case 0:
-                    if (nvTabuleiro.LugarTabuleiro[1] == 'V')
-                    {
-                        return 1;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[7] == 'V')
-                    {
-                        return 7;
-                    }
-                    break;
-                case 1:
-                    if (nvTabuleiro.LugarTabuleiro[0] == 'V')
-                    {
-                        return 0;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[2] == 'V')
-                    {
-                        return 2;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[9] == 'V')
-                    {
-                        return 9;
-                    }
-                    break;
-                case 2:
-                    if (nvTabuleiro.LugarTabuleiro[1] == 'V')
-                    {
-                        return 1;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[3] == 'V')
-                    {
-                        return 3;
-                    }
-                    break;
-                case 3:
-                    if (nvTabuleiro.LugarTabuleiro[2] == 'V')
-                    {
-                        return 2;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[4] == 'V')
-                    {
-                        return 4;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[11] == 'V')
-                    {
-                        return 11;
-                    }
-                    break;
-                case 4:
-                    if (nvTabuleiro.LugarTabuleiro[3] == 'V')
-                    {
-                        return 3;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[5] == 'V')
-                    {
-                        return 5;
-                    }
-                    break;
-                case 5:
-                    if (nvTabuleiro.LugarTabuleiro[4] == 'V')
-                    {
-                        return 4;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[6] == 'V')
-                    {
-                        return 6;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[13] == 'V')
-                    {
-                        return 13;
-                    }
-                    break;
-                case 6:
-                    if (nvTabuleiro.LugarTabuleiro[5] == 'V')
-                    {
-                        return 5;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[7] == 'V')
-                    {
-                        return 7;
-                    }
-                    break;
-                case 7:
-                    if (nvTabuleiro.LugarTabuleiro[6] == 'V')
-                    {
-                        return 6;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[0] == 'V')
-                    {
-                        return 0;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[15] == 'V')
-                    {
-                        return 15;
-                    }
-                    break;
-                #endregion
-
-                #region Meio
-                case 8:
-                    if (nvTabuleiro.LugarTabuleiro[15] == 'V')
-                    {
-                        return 15;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[9] == 'V')
-                    {
-                        return 9;
-                    }
-                    break;
-                case 9:
-                    if (nvTabuleiro.LugarTabuleiro[8] == 'V')
-                    {
-                        return 8;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[1] == 'V')
-                    {
-                        return 1;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[17] == 'V')
-                    {
-                        return 17;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[10] == 'V')
-                    {
-                        return 10;
-                    }
-                    break;
-                case 10:
-                    if (nvTabuleiro.LugarTabuleiro[9] == 'V')
-                    {
-                        return 9;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[11] == 'V')
-                    {
-                        return 11;
-                    }
-                    break;
-                case 11:
-                    if (nvTabuleiro.LugarTabuleiro[10] == 'V')
-                    {
-                        return 10;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[3] == 'V')
-                    {
-                        return 3;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[19] == 'V')
-                    {
-                        return 19;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[12] == 'V')
-                    {
-                        return 12;
-                    }
-                    break;
-                case 12:
-                    if (nvTabuleiro.LugarTabuleiro[11] == 'V')
-                    {
-                        return 11;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[13] == 'V')
-                    {
-                        return 13;
-                    }
-                    break;
-                case 13:
-                    if (nvTabuleiro.LugarTabuleiro[12] == 'V')
-                    {
-                        return 12;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[5] == 'V')
-                    {
-                        return 5;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[21] == 'V')
-                    {
-                        return 21;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[14] == 'V')
-                    {
-                        return 14;
-                    }
-                    break;
-                case 14:
-                    if (nvTabuleiro.LugarTabuleiro[13] == 'V')
-                    {
-                        return 13;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[15] == 'V')
-                    {
-                        return 15;
-                    }
-                    break;
-                case 15:
-                    if (nvTabuleiro.LugarTabuleiro[14] == 'V')
-                    {
-                        return 14;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[7] == 'V')
-                    {
-                        return 7;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[23] == 'V')
-                    {
-                        return 23;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[8] == 'V')
-                    {
-                        return 8;
-                    }
-                    break;
-                #endregion
-
-                #region Dentro
-                case 16:
-                    if (nvTabuleiro.LugarTabuleiro[23] == 'V')
-                    {
-                        return 23;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[17] == 'V')
-                    {
-                        return 17;
-                    }
-                    break;
-                case 17:
-                    if (nvTabuleiro.LugarTabuleiro[16] == 'V')
-                    {
-                        return 16;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[9] == 'V')
-                    {
-                        return 9;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[18] == 'V')
-                    {
-                        return 18;
-                    }
-                    break;
-                case 18:
-                    if (nvTabuleiro.LugarTabuleiro[17] == 'V')
-                    {
-                        return 17;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[19] == 'V')
-                    {
-                        return 19;
-                    }
-                    break;
-                case 19:
-                    if (nvTabuleiro.LugarTabuleiro[18] == 'V')
-                    {
-                        return 18;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[11] == 'V')
-                    {
-                        return 11;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[20] == 'V')
-                    {
-                        return 20;
-                    }
-                    break;
-                case 20:
-                    if (nvTabuleiro.LugarTabuleiro[19] == 'V')
-                    {
-                        return 19;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[21] == 'V')
-                    {
-                        return 21;
-                    }
-                    break;
-                case 21:
-                    if (nvTabuleiro.LugarTabuleiro[20] == 'V')
-                    {
-                        return 20;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[13] == 'V')
-                    {
-                        return 13;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[22] == 'V')
-                    {
-                        return 22;
-                    }
-                    break;
-                case 22:
-                    if (nvTabuleiro.LugarTabuleiro[21] == 'V')
-                    {
-                        return 21;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[23] == 'V')
-                    {
-                        return 23;
-                    }
-                    break;
-                case 23:
-                    if (nvTabuleiro.LugarTabuleiro[22] == 'V')
-                    {
-                        return 22;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[15] == 'V')
-                    {
-                        return 15;
-                    }
-                    if (nvTabuleiro.LugarTabuleiro[16] == 'V')
-                    {
-                        return 16;
-                    }
-                    break;
-                    #endregion
-            }
-            return -1;
-        }
+        //:: Guarda uma mensagem para jogador
+        private string mensagem = string.Empty;
+        public string Mensagem { get => mensagem; set => mensagem = value; }
 
         //:: Jogar aleatório caso não tenha possibilidade de trilha
-        private int IAJogarAleatorio()
+        //:: Tuple < 1, 2 >
+        //>  1 => antes das 9
+        //>  2 => depois das 9
+        private Tuple<int, int> IAJogarAleatorio()
         {
-            //:: Somente enquanto esta colocando as 9 peças no tabuleiro
+            //:: Usado par sortear um número randômico
+            System.Random rd = new System.Random();
+
+            //:: Usados para guardar umas posições
+            int j = -1;
+            int ret = -1;
+
+            //:: Somente enquanto está colocando as 9 peças no tabuleiro
             if (AI9pecas[8] == -1)
             {
-                //:: jogo aleatório colocando peça em qualquer lugar no tabuleiro
-                Random rd = new Random();
-                int j = -1;
-                int ret = -1;
+                //:: joga aleatório colocando peça em qualquer lugar no tabuleiro
                 do
                 {
                     j = rd.Next(0, 23);
-                    ret = j != -1 ? IALugarVazio(j) : -1;
+                    ret = j != -1 ? IALugarVazio('V', j) : -1;
 
                     if (ret != -1)
                     {
-                        //> coloca lugar com peça preta
+                        //:: Coloca lugar com peça preta
                         nvTabuleiro.LugarTabuleiro[ret] = 'P';
 
+                        //:: Coloca peça na posição vazia de jogada rápida
                         for (int i = 0; i < AI9pecas.Length; i++)
                         {
                             if (AI9pecas[i] == -1)
@@ -364,457 +56,242 @@ namespace Trilha
                     }
                 }
                 while (j == -1);
-                return 1;
+                return new Tuple<int, int>(ret, -1);
             }
             //:: Depois de colocar as 9 peças no tabuleiro
             //:: Movimentação das peças
             else
             {
-                //:: jogar aleatório movendo peças já colocadas
-                //:: checar posição das 9 peças no tabuleiro e fazer uma defesa ou ataque
+                //:: Percorre as posições de jogo rápido checando qual peça poderá ser movimentada
+
+                //:> precisa fazer retornar 2 valores para atualizar o tabuleiro
                 for (int i = 0; i < AI9pecas.Length; i++)
                 {
-                    //:: 1 chegar se tem possibilidade de fazer uma trilha com essa peça
-                    //if (AI9pecas[i])
-                    //{
-
-                   // }
-                    //:: 2 checar se precisa fazer uma defesa com esa peça
-
-
+                    ret = IALugarVazio('V', AI9pecas[i]);
+                    if (ret != -1)
+                    {
+                        int marcaPvazio = AI9pecas[i];
+                        nvTabuleiro.LugarTabuleiro[AI9pecas[i]] = 'V';
+                        nvTabuleiro.LugarTabuleiro[ret] = 'P';
+                        AI9pecas[i] = ret;
+                        return new Tuple<int, int>(ret, marcaPvazio);
+                    }
                 }
-                //:: Caso não tenha defesa ou possibilidade de trilha movimenta 1ª peça disponivel
-                //:: 3 movimenta essa peça 
-               // for (int i = 0; i < AI9pecas.Length; i++)
-                //{
-
-               // }
-                return -1;
+                return new Tuple<int, int>(-1, -1);
             }
         }
 
         //:: Verificar possivel trilha do jogador
-        private int IAVerificarTrilhaJogador()
+        //:: Passando parametro char(z) para verificar se defende ou ataca
+        //> P para ATACAR
+        //> B para DEFENDER
+        private int IAVerificarTrilha(char z)
         {
             //:: horizontal 0,1,2
-            if (nvTabuleiro.LugarTabuleiro[0] == 'B' && nvTabuleiro.LugarTabuleiro[1] == 'B' && nvTabuleiro.LugarTabuleiro[2] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[0] == z && nvTabuleiro.LugarTabuleiro[1] == z && nvTabuleiro.LugarTabuleiro[2] == 'V')
             {
                 return 2;
             }
-            if (nvTabuleiro.LugarTabuleiro[0] == 'B' && nvTabuleiro.LugarTabuleiro[2] == 'B' && nvTabuleiro.LugarTabuleiro[1] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[0] == z && nvTabuleiro.LugarTabuleiro[2] == z && nvTabuleiro.LugarTabuleiro[1] == 'V')
             {
                 return 1;
             }
-            if (nvTabuleiro.LugarTabuleiro[1] == 'B' && nvTabuleiro.LugarTabuleiro[2] == 'B' && nvTabuleiro.LugarTabuleiro[0] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[1] == z && nvTabuleiro.LugarTabuleiro[2] == z && nvTabuleiro.LugarTabuleiro[0] == 'V')
             {
                 return 0;
             }
             //:: vertical 2,3,4
-            if (nvTabuleiro.LugarTabuleiro[2] == 'B' && nvTabuleiro.LugarTabuleiro[3] == 'B' && nvTabuleiro.LugarTabuleiro[4] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[2] == z && nvTabuleiro.LugarTabuleiro[3] == z && nvTabuleiro.LugarTabuleiro[4] == 'V')
             {
                 return 4;
             }
-            if (nvTabuleiro.LugarTabuleiro[2] == 'B' && nvTabuleiro.LugarTabuleiro[4] == 'B' && nvTabuleiro.LugarTabuleiro[3] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[2] == z && nvTabuleiro.LugarTabuleiro[4] == z && nvTabuleiro.LugarTabuleiro[3] == 'V')
             {
                 return 3;
             }
-            if (nvTabuleiro.LugarTabuleiro[3] == 'B' && nvTabuleiro.LugarTabuleiro[4] == 'B' && nvTabuleiro.LugarTabuleiro[2] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[3] == z && nvTabuleiro.LugarTabuleiro[4] == z && nvTabuleiro.LugarTabuleiro[2] == 'V')
             {
                 return 2;
             }
             //:: horizontal 4,5,6
-            if (nvTabuleiro.LugarTabuleiro[4] == 'B' && nvTabuleiro.LugarTabuleiro[5] == 'B' && nvTabuleiro.LugarTabuleiro[6] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[4] == z && nvTabuleiro.LugarTabuleiro[5] == z && nvTabuleiro.LugarTabuleiro[6] == 'V')
             {
                 return 6;
             }
-            if (nvTabuleiro.LugarTabuleiro[4] == 'B' && nvTabuleiro.LugarTabuleiro[6] == 'B' && nvTabuleiro.LugarTabuleiro[5] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[4] == z && nvTabuleiro.LugarTabuleiro[6] == z && nvTabuleiro.LugarTabuleiro[5] == 'V')
             {
                 return 5;
             }
-            if (nvTabuleiro.LugarTabuleiro[5] == 'B' && nvTabuleiro.LugarTabuleiro[6] == 'B' && nvTabuleiro.LugarTabuleiro[4] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[5] == z && nvTabuleiro.LugarTabuleiro[6] == z && nvTabuleiro.LugarTabuleiro[4] == 'V')
             {
                 return 4;
             }
             //:: vertical 6,7,0
-            if (nvTabuleiro.LugarTabuleiro[6] == 'B' && nvTabuleiro.LugarTabuleiro[7] == 'B' && nvTabuleiro.LugarTabuleiro[0] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[6] == z && nvTabuleiro.LugarTabuleiro[7] == z && nvTabuleiro.LugarTabuleiro[0] == 'V')
             {
                 return 0;
             }
-            if (nvTabuleiro.LugarTabuleiro[6] == 'B' && nvTabuleiro.LugarTabuleiro[0] == 'B' && nvTabuleiro.LugarTabuleiro[7] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[6] == z && nvTabuleiro.LugarTabuleiro[0] == z && nvTabuleiro.LugarTabuleiro[7] == 'V')
             {
                 return 7;
             }
-            if (nvTabuleiro.LugarTabuleiro[7] == 'B' && nvTabuleiro.LugarTabuleiro[0] == 'B' && nvTabuleiro.LugarTabuleiro[6] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[7] == z && nvTabuleiro.LugarTabuleiro[0] == z && nvTabuleiro.LugarTabuleiro[6] == 'V')
             {
                 return 6;
             }
             //:: horizontal 8,9,10
-            if (nvTabuleiro.LugarTabuleiro[8] == 'B' && nvTabuleiro.LugarTabuleiro[9] == 'B' && nvTabuleiro.LugarTabuleiro[10] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[8] == z && nvTabuleiro.LugarTabuleiro[9] == z && nvTabuleiro.LugarTabuleiro[10] == 'V')
             {
                 return 10;
             }
-            if (nvTabuleiro.LugarTabuleiro[8] == 'B' && nvTabuleiro.LugarTabuleiro[10] == 'B' && nvTabuleiro.LugarTabuleiro[9] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[8] == z && nvTabuleiro.LugarTabuleiro[10] == z && nvTabuleiro.LugarTabuleiro[9] == 'V')
             {
                 return 9;
             }
-            if (nvTabuleiro.LugarTabuleiro[9] == 'B' && nvTabuleiro.LugarTabuleiro[10] == 'B' && nvTabuleiro.LugarTabuleiro[8] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[9] == z && nvTabuleiro.LugarTabuleiro[10] == z && nvTabuleiro.LugarTabuleiro[8] == 'V')
             {
                 return 8;
             }
             //:: vertical 10,11,12
-            if (nvTabuleiro.LugarTabuleiro[10] == 'B' && nvTabuleiro.LugarTabuleiro[11] == 'B' && nvTabuleiro.LugarTabuleiro[12] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[10] == z && nvTabuleiro.LugarTabuleiro[11] == z && nvTabuleiro.LugarTabuleiro[12] == 'V')
             {
                 return 12;
             }
-            if (nvTabuleiro.LugarTabuleiro[10] == 'B' && nvTabuleiro.LugarTabuleiro[12] == 'B' && nvTabuleiro.LugarTabuleiro[11] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[10] == z && nvTabuleiro.LugarTabuleiro[12] == z && nvTabuleiro.LugarTabuleiro[11] == 'V')
             {
                 return 11;
             }
-            if (nvTabuleiro.LugarTabuleiro[11] == 'B' && nvTabuleiro.LugarTabuleiro[12] == 'B' && nvTabuleiro.LugarTabuleiro[10] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[11] == z && nvTabuleiro.LugarTabuleiro[12] == z && nvTabuleiro.LugarTabuleiro[10] == 'V')
             {
                 return 10;
             }
             //:: horizontal 12,13,14
-            if (nvTabuleiro.LugarTabuleiro[12] == 'B' && nvTabuleiro.LugarTabuleiro[13] == 'B' && nvTabuleiro.LugarTabuleiro[14] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[12] == z && nvTabuleiro.LugarTabuleiro[13] == z && nvTabuleiro.LugarTabuleiro[14] == 'V')
             {
                 return 14;
             }
-            if (nvTabuleiro.LugarTabuleiro[12] == 'B' && nvTabuleiro.LugarTabuleiro[14] == 'B' && nvTabuleiro.LugarTabuleiro[13] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[12] == z && nvTabuleiro.LugarTabuleiro[14] == z && nvTabuleiro.LugarTabuleiro[13] == 'V')
             {
                 return 13;
             }
-            if (nvTabuleiro.LugarTabuleiro[13] == 'B' && nvTabuleiro.LugarTabuleiro[14] == 'B' && nvTabuleiro.LugarTabuleiro[12] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[13] == z && nvTabuleiro.LugarTabuleiro[14] == z && nvTabuleiro.LugarTabuleiro[12] == 'V')
             {
                 return 12;
             }
             //:: vertical 14,15,8
-            if (nvTabuleiro.LugarTabuleiro[14] == 'B' && nvTabuleiro.LugarTabuleiro[15] == 'B' && nvTabuleiro.LugarTabuleiro[8] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[14] == z && nvTabuleiro.LugarTabuleiro[15] == z && nvTabuleiro.LugarTabuleiro[8] == 'V')
             {
                 return 8;
             }
-            if (nvTabuleiro.LugarTabuleiro[14] == 'B' && nvTabuleiro.LugarTabuleiro[8] == 'B' && nvTabuleiro.LugarTabuleiro[15] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[14] == z && nvTabuleiro.LugarTabuleiro[8] == z && nvTabuleiro.LugarTabuleiro[15] == 'V')
             {
                 return 15;
             }
-            if (nvTabuleiro.LugarTabuleiro[15] == 'B' && nvTabuleiro.LugarTabuleiro[8] == 'B' && nvTabuleiro.LugarTabuleiro[14] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[15] == z && nvTabuleiro.LugarTabuleiro[8] == z && nvTabuleiro.LugarTabuleiro[14] == 'V')
             {
                 return 14;
             }
             //:: horizontal 16,17,18
-            if (nvTabuleiro.LugarTabuleiro[16] == 'B' && nvTabuleiro.LugarTabuleiro[17] == 'B' && nvTabuleiro.LugarTabuleiro[18] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[16] == z && nvTabuleiro.LugarTabuleiro[17] == z && nvTabuleiro.LugarTabuleiro[18] == 'V')
             {
                 return 18;
             }
-            if (nvTabuleiro.LugarTabuleiro[16] == 'B' && nvTabuleiro.LugarTabuleiro[18] == 'B' && nvTabuleiro.LugarTabuleiro[17] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[16] == z && nvTabuleiro.LugarTabuleiro[18] == z && nvTabuleiro.LugarTabuleiro[17] == 'V')
             {
                 return 17;
             }
-            if (nvTabuleiro.LugarTabuleiro[17] == 'B' && nvTabuleiro.LugarTabuleiro[18] == 'B' && nvTabuleiro.LugarTabuleiro[16] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[17] == z && nvTabuleiro.LugarTabuleiro[18] == z && nvTabuleiro.LugarTabuleiro[16] == 'V')
             {
                 return 16;
             }
             //:: vertical 18,19,20
-            if (nvTabuleiro.LugarTabuleiro[18] == 'B' && nvTabuleiro.LugarTabuleiro[19] == 'B' && nvTabuleiro.LugarTabuleiro[20] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[18] == z && nvTabuleiro.LugarTabuleiro[19] == z && nvTabuleiro.LugarTabuleiro[20] == 'V')
             {
                 return 20;
             }
-            if (nvTabuleiro.LugarTabuleiro[18] == 'B' && nvTabuleiro.LugarTabuleiro[20] == 'B' && nvTabuleiro.LugarTabuleiro[19] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[18] == z && nvTabuleiro.LugarTabuleiro[20] == z && nvTabuleiro.LugarTabuleiro[19] == 'V')
             {
                 return 19;
             }
-            if (nvTabuleiro.LugarTabuleiro[19] == 'B' && nvTabuleiro.LugarTabuleiro[20] == 'B' && nvTabuleiro.LugarTabuleiro[18] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[19] == z && nvTabuleiro.LugarTabuleiro[20] == z && nvTabuleiro.LugarTabuleiro[18] == 'V')
             {
                 return 18;
             }
             //:: horizontal 20,21,22
-            if (nvTabuleiro.LugarTabuleiro[20] == 'B' && nvTabuleiro.LugarTabuleiro[21] == 'B' && nvTabuleiro.LugarTabuleiro[22] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[20] == z && nvTabuleiro.LugarTabuleiro[21] == z && nvTabuleiro.LugarTabuleiro[22] == 'V')
             {
                 return 22;
             }
-            if (nvTabuleiro.LugarTabuleiro[20] == 'B' && nvTabuleiro.LugarTabuleiro[22] == 'B' && nvTabuleiro.LugarTabuleiro[21] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[20] == z && nvTabuleiro.LugarTabuleiro[22] == z && nvTabuleiro.LugarTabuleiro[21] == 'V')
             {
                 return 21;
             }
-            if (nvTabuleiro.LugarTabuleiro[21] == 'B' && nvTabuleiro.LugarTabuleiro[22] == 'B' && nvTabuleiro.LugarTabuleiro[20] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[21] == z && nvTabuleiro.LugarTabuleiro[22] == z && nvTabuleiro.LugarTabuleiro[20] == 'V')
             {
                 return 20;
             }
             //:: vertical 22,23,16
-            if (nvTabuleiro.LugarTabuleiro[22] == 'B' && nvTabuleiro.LugarTabuleiro[23] == 'B' && nvTabuleiro.LugarTabuleiro[16] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[22] == z && nvTabuleiro.LugarTabuleiro[23] == z && nvTabuleiro.LugarTabuleiro[16] == 'V')
             {
                 return 16;
             }
-            if (nvTabuleiro.LugarTabuleiro[22] == 'B' && nvTabuleiro.LugarTabuleiro[16] == 'B' && nvTabuleiro.LugarTabuleiro[23] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[22] == z && nvTabuleiro.LugarTabuleiro[16] == z && nvTabuleiro.LugarTabuleiro[23] == 'V')
             {
                 return 23;
             }
-            if (nvTabuleiro.LugarTabuleiro[23] == 'B' && nvTabuleiro.LugarTabuleiro[16] == 'B' && nvTabuleiro.LugarTabuleiro[22] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[23] == z && nvTabuleiro.LugarTabuleiro[16] == z && nvTabuleiro.LugarTabuleiro[22] == 'V')
             {
                 return 22;
             }
             //:: Trilha do centro 1,9,17
-            if (nvTabuleiro.LugarTabuleiro[1] == 'B' && nvTabuleiro.LugarTabuleiro[9] == 'B' && nvTabuleiro.LugarTabuleiro[17] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[1] == z && nvTabuleiro.LugarTabuleiro[9] == z && nvTabuleiro.LugarTabuleiro[17] == 'V')
             {
                 return 17;
             }
-            if (nvTabuleiro.LugarTabuleiro[1] == 'B' && nvTabuleiro.LugarTabuleiro[17] == 'B' && nvTabuleiro.LugarTabuleiro[9] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[1] == z && nvTabuleiro.LugarTabuleiro[17] == z && nvTabuleiro.LugarTabuleiro[9] == 'V')
             {
                 return 9;
             }
-            if (nvTabuleiro.LugarTabuleiro[9] == 'B' && nvTabuleiro.LugarTabuleiro[17] == 'B' && nvTabuleiro.LugarTabuleiro[1] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[9] == z && nvTabuleiro.LugarTabuleiro[17] == z && nvTabuleiro.LugarTabuleiro[1] == 'V')
             {
                 return 1;
             }
             //:: Trilha do centro 3,11,19
-            if (nvTabuleiro.LugarTabuleiro[3] == 'B' && nvTabuleiro.LugarTabuleiro[11] == 'B' && nvTabuleiro.LugarTabuleiro[19] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[3] == z && nvTabuleiro.LugarTabuleiro[11] == z && nvTabuleiro.LugarTabuleiro[19] == 'V')
             {
                 return 19;
             }
-            if (nvTabuleiro.LugarTabuleiro[3] == 'B' && nvTabuleiro.LugarTabuleiro[19] == 'B' && nvTabuleiro.LugarTabuleiro[11] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[3] == z && nvTabuleiro.LugarTabuleiro[19] == z && nvTabuleiro.LugarTabuleiro[11] == 'V')
             {
                 return 11;
             }
-            if (nvTabuleiro.LugarTabuleiro[11] == 'B' && nvTabuleiro.LugarTabuleiro[19] == 'B' && nvTabuleiro.LugarTabuleiro[3] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[11] == z && nvTabuleiro.LugarTabuleiro[19] == z && nvTabuleiro.LugarTabuleiro[3] == 'V')
             {
                 return 3;
             }
             //:: Trilha do centro 5,13,21
-            if (nvTabuleiro.LugarTabuleiro[5] == 'B' && nvTabuleiro.LugarTabuleiro[13] == 'B' && nvTabuleiro.LugarTabuleiro[21] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[5] == z && nvTabuleiro.LugarTabuleiro[13] == z && nvTabuleiro.LugarTabuleiro[21] == 'V')
             {
                 return 21;
             }
-            if (nvTabuleiro.LugarTabuleiro[5] == 'B' && nvTabuleiro.LugarTabuleiro[21] == 'B' && nvTabuleiro.LugarTabuleiro[13] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[5] == z && nvTabuleiro.LugarTabuleiro[21] == z && nvTabuleiro.LugarTabuleiro[13] == 'V')
             {
                 return 13;
             }
-            if (nvTabuleiro.LugarTabuleiro[13] == 'B' && nvTabuleiro.LugarTabuleiro[21] == 'B' && nvTabuleiro.LugarTabuleiro[5] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[13] == z && nvTabuleiro.LugarTabuleiro[21] == z && nvTabuleiro.LugarTabuleiro[5] == 'V')
             {
                 return 5;
             }
             //:: Trilha do centro 7,15,23
-            if (nvTabuleiro.LugarTabuleiro[7] == 'B' && nvTabuleiro.LugarTabuleiro[15] == 'B' && nvTabuleiro.LugarTabuleiro[23] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[7] == z && nvTabuleiro.LugarTabuleiro[15] == z && nvTabuleiro.LugarTabuleiro[23] == 'V')
             {
                 return 23;
             }
-            if (nvTabuleiro.LugarTabuleiro[7] == 'B' && nvTabuleiro.LugarTabuleiro[23] == 'B' && nvTabuleiro.LugarTabuleiro[15] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[7] == z && nvTabuleiro.LugarTabuleiro[23] == z && nvTabuleiro.LugarTabuleiro[15] == 'V')
             {
                 return 15;
             }
-            if (nvTabuleiro.LugarTabuleiro[15] == 'B' && nvTabuleiro.LugarTabuleiro[23] == 'B' && nvTabuleiro.LugarTabuleiro[7] == 'V')
-            {
-                return 7;
-            }
-            return -1;
-        }
-
-        //:: Verificar se é possivel fazer uma trilha
-        private int IAFazerTrilha()
-        {
-            //:: horizontal 0,1,2
-            if (nvTabuleiro.LugarTabuleiro[0] == 'P' && nvTabuleiro.LugarTabuleiro[1] == 'P' && nvTabuleiro.LugarTabuleiro[2] == 'V')
-            {
-                return 2;
-            }
-            if (nvTabuleiro.LugarTabuleiro[0] == 'P' && nvTabuleiro.LugarTabuleiro[2] == 'P' && nvTabuleiro.LugarTabuleiro[1] == 'V')
-            {
-                return 1;
-            }
-            if (nvTabuleiro.LugarTabuleiro[1] == 'P' && nvTabuleiro.LugarTabuleiro[2] == 'P' && nvTabuleiro.LugarTabuleiro[0] == 'V')
-            {
-                return 0;
-            }
-            //:: vertical 2,3,4
-            if (nvTabuleiro.LugarTabuleiro[2] == 'P' && nvTabuleiro.LugarTabuleiro[3] == 'P' && nvTabuleiro.LugarTabuleiro[4] == 'V')
-            {
-                return 4;
-            }
-            if (nvTabuleiro.LugarTabuleiro[2] == 'P' && nvTabuleiro.LugarTabuleiro[4] == 'P' && nvTabuleiro.LugarTabuleiro[3] == 'V')
-            {
-                return 3;
-            }
-            if (nvTabuleiro.LugarTabuleiro[3] == 'P' && nvTabuleiro.LugarTabuleiro[4] == 'P' && nvTabuleiro.LugarTabuleiro[2] == 'V')
-            {
-                return 2;
-            }
-            //:: horizontal 4,5,6
-            if (nvTabuleiro.LugarTabuleiro[4] == 'P' && nvTabuleiro.LugarTabuleiro[5] == 'P' && nvTabuleiro.LugarTabuleiro[6] == 'V')
-            {
-                return 6;
-            }
-            if (nvTabuleiro.LugarTabuleiro[4] == 'P' && nvTabuleiro.LugarTabuleiro[6] == 'P' && nvTabuleiro.LugarTabuleiro[5] == 'V')
-            {
-                return 5;
-            }
-            if (nvTabuleiro.LugarTabuleiro[5] == 'P' && nvTabuleiro.LugarTabuleiro[6] == 'P' && nvTabuleiro.LugarTabuleiro[4] == 'V')
-            {
-                return 4;
-            }
-            //:: vertical 6,7,0
-            if (nvTabuleiro.LugarTabuleiro[6] == 'P' && nvTabuleiro.LugarTabuleiro[7] == 'P' && nvTabuleiro.LugarTabuleiro[0] == 'V')
-            {
-                return 0;
-            }
-            if (nvTabuleiro.LugarTabuleiro[6] == 'P' && nvTabuleiro.LugarTabuleiro[0] == 'P' && nvTabuleiro.LugarTabuleiro[7] == 'V')
-            {
-                return 7;
-            }
-            if (nvTabuleiro.LugarTabuleiro[7] == 'P' && nvTabuleiro.LugarTabuleiro[0] == 'P' && nvTabuleiro.LugarTabuleiro[6] == 'V')
-            {
-                return 6;
-            }
-            //:: horizontal 8,9,10
-            if (nvTabuleiro.LugarTabuleiro[8] == 'P' && nvTabuleiro.LugarTabuleiro[9] == 'P' && nvTabuleiro.LugarTabuleiro[10] == 'V')
-            {
-                return 10;
-            }
-            if (nvTabuleiro.LugarTabuleiro[8] == 'P' && nvTabuleiro.LugarTabuleiro[10] == 'P' && nvTabuleiro.LugarTabuleiro[9] == 'V')
-            {
-                return 9;
-            }
-            if (nvTabuleiro.LugarTabuleiro[9] == 'P' && nvTabuleiro.LugarTabuleiro[10] == 'P' && nvTabuleiro.LugarTabuleiro[8] == 'V')
-            {
-                return 8;
-            }
-            //:: vertical 10,11,12
-            if (nvTabuleiro.LugarTabuleiro[10] == 'P' && nvTabuleiro.LugarTabuleiro[11] == 'P' && nvTabuleiro.LugarTabuleiro[12] == 'V')
-            {
-                return 12;
-            }
-            if (nvTabuleiro.LugarTabuleiro[10] == 'P' && nvTabuleiro.LugarTabuleiro[12] == 'P' && nvTabuleiro.LugarTabuleiro[11] == 'V')
-            {
-                return 11;
-            }
-            if (nvTabuleiro.LugarTabuleiro[11] == 'P' && nvTabuleiro.LugarTabuleiro[12] == 'P' && nvTabuleiro.LugarTabuleiro[10] == 'V')
-            {
-                return 10;
-            }
-            //:: horizontal 12,13,14
-            if (nvTabuleiro.LugarTabuleiro[12] == 'P' && nvTabuleiro.LugarTabuleiro[13] == 'P' && nvTabuleiro.LugarTabuleiro[14] == 'V')
-            {
-                return 14;
-            }
-            if (nvTabuleiro.LugarTabuleiro[12] == 'P' && nvTabuleiro.LugarTabuleiro[14] == 'P' && nvTabuleiro.LugarTabuleiro[13] == 'V')
-            {
-                return 13;
-            }
-            if (nvTabuleiro.LugarTabuleiro[13] == 'P' && nvTabuleiro.LugarTabuleiro[14] == 'P' && nvTabuleiro.LugarTabuleiro[12] == 'V')
-            {
-                return 12;
-            }
-            //:: vertical 14,15,8
-            if (nvTabuleiro.LugarTabuleiro[14] == 'P' && nvTabuleiro.LugarTabuleiro[15] == 'P' && nvTabuleiro.LugarTabuleiro[8] == 'V')
-            {
-                return 8;
-            }
-            if (nvTabuleiro.LugarTabuleiro[14] == 'P' && nvTabuleiro.LugarTabuleiro[8] == 'P' && nvTabuleiro.LugarTabuleiro[15] == 'V')
-            {
-                return 15;
-            }
-            if (nvTabuleiro.LugarTabuleiro[15] == 'P' && nvTabuleiro.LugarTabuleiro[8] == 'P' && nvTabuleiro.LugarTabuleiro[14] == 'V')
-            {
-                return 14;
-            }
-            //:: horizontal 16,17,18
-            if (nvTabuleiro.LugarTabuleiro[16] == 'P' && nvTabuleiro.LugarTabuleiro[17] == 'P' && nvTabuleiro.LugarTabuleiro[18] == 'V')
-            {
-                return 18;
-            }
-            if (nvTabuleiro.LugarTabuleiro[16] == 'P' && nvTabuleiro.LugarTabuleiro[18] == 'P' && nvTabuleiro.LugarTabuleiro[17] == 'V')
-            {
-                return 17;
-            }
-            if (nvTabuleiro.LugarTabuleiro[17] == 'P' && nvTabuleiro.LugarTabuleiro[18] == 'P' && nvTabuleiro.LugarTabuleiro[16] == 'V')
-            {
-                return 16;
-            }
-            //:: vertical 18,19,20
-            if (nvTabuleiro.LugarTabuleiro[18] == 'P' && nvTabuleiro.LugarTabuleiro[19] == 'P' && nvTabuleiro.LugarTabuleiro[20] == 'V')
-            {
-                return 20;
-            }
-            if (nvTabuleiro.LugarTabuleiro[18] == 'P' && nvTabuleiro.LugarTabuleiro[20] == 'P' && nvTabuleiro.LugarTabuleiro[19] == 'V')
-            {
-                return 19;
-            }
-            if (nvTabuleiro.LugarTabuleiro[19] == 'P' && nvTabuleiro.LugarTabuleiro[20] == 'P' && nvTabuleiro.LugarTabuleiro[18] == 'V')
-            {
-                return 18;
-            }
-            //:: horizontal 20,21,22
-            if (nvTabuleiro.LugarTabuleiro[20] == 'P' && nvTabuleiro.LugarTabuleiro[21] == 'P' && nvTabuleiro.LugarTabuleiro[22] == 'V')
-            {
-                return 22;
-            }
-            if (nvTabuleiro.LugarTabuleiro[20] == 'P' && nvTabuleiro.LugarTabuleiro[22] == 'P' && nvTabuleiro.LugarTabuleiro[21] == 'V')
-            {
-                return 21;
-            }
-            if (nvTabuleiro.LugarTabuleiro[21] == 'P' && nvTabuleiro.LugarTabuleiro[22] == 'P' && nvTabuleiro.LugarTabuleiro[20] == 'V')
-            {
-                return 20;
-            }
-            //:: vertical 22,23,16
-            if (nvTabuleiro.LugarTabuleiro[22] == 'P' && nvTabuleiro.LugarTabuleiro[23] == 'P' && nvTabuleiro.LugarTabuleiro[16] == 'V')
-            {
-                return 16;
-            }
-            if (nvTabuleiro.LugarTabuleiro[22] == 'P' && nvTabuleiro.LugarTabuleiro[16] == 'P' && nvTabuleiro.LugarTabuleiro[23] == 'V')
-            {
-                return 23;
-            }
-            if (nvTabuleiro.LugarTabuleiro[23] == 'P' && nvTabuleiro.LugarTabuleiro[16] == 'P' && nvTabuleiro.LugarTabuleiro[22] == 'V')
-            {
-                return 22;
-            }
-            //:: Trilha do centro 1,9,17
-            if (nvTabuleiro.LugarTabuleiro[1] == 'P' && nvTabuleiro.LugarTabuleiro[9] == 'P' && nvTabuleiro.LugarTabuleiro[17] == 'V')
-            {
-                return 17;
-            }
-            if (nvTabuleiro.LugarTabuleiro[1] == 'P' && nvTabuleiro.LugarTabuleiro[17] == 'P' && nvTabuleiro.LugarTabuleiro[9] == 'V')
-            {
-                return 9;
-            }
-            if (nvTabuleiro.LugarTabuleiro[9] == 'P' && nvTabuleiro.LugarTabuleiro[17] == 'P' && nvTabuleiro.LugarTabuleiro[1] == 'V')
-            {
-                return 1;
-            }
-            //:: Trilha do centro 3,11,19
-            if (nvTabuleiro.LugarTabuleiro[3] == 'P' && nvTabuleiro.LugarTabuleiro[11] == 'P' && nvTabuleiro.LugarTabuleiro[19] == 'V')
-            {
-                return 19;
-            }
-            if (nvTabuleiro.LugarTabuleiro[3] == 'P' && nvTabuleiro.LugarTabuleiro[19] == 'P' && nvTabuleiro.LugarTabuleiro[11] == 'V')
-            {
-                return 11;
-            }
-            if (nvTabuleiro.LugarTabuleiro[11] == 'P' && nvTabuleiro.LugarTabuleiro[19] == 'P' && nvTabuleiro.LugarTabuleiro[3] == 'V')
-            {
-                return 3;
-            }
-            //:: Trilha do centro 5,13,21
-            if (nvTabuleiro.LugarTabuleiro[5] == 'P' && nvTabuleiro.LugarTabuleiro[13] == 'P' && nvTabuleiro.LugarTabuleiro[21] == 'V')
-            {
-                return 21;
-            }
-            if (nvTabuleiro.LugarTabuleiro[5] == 'P' && nvTabuleiro.LugarTabuleiro[21] == 'P' && nvTabuleiro.LugarTabuleiro[13] == 'V')
-            {
-                return 13;
-            }
-            if (nvTabuleiro.LugarTabuleiro[13] == 'P' && nvTabuleiro.LugarTabuleiro[21] == 'P' && nvTabuleiro.LugarTabuleiro[5] == 'V')
-            {
-                return 5;
-            }
-            //:: Trilha do centro 7,15,23
-            if (nvTabuleiro.LugarTabuleiro[7] == 'P' && nvTabuleiro.LugarTabuleiro[15] == 'P' && nvTabuleiro.LugarTabuleiro[23] == 'V')
-            {
-                return 23;
-            }
-            if (nvTabuleiro.LugarTabuleiro[7] == 'P' && nvTabuleiro.LugarTabuleiro[23] == 'P' && nvTabuleiro.LugarTabuleiro[15] == 'V')
-            {
-                return 15;
-            }
-            if (nvTabuleiro.LugarTabuleiro[15] == 'P' && nvTabuleiro.LugarTabuleiro[23] == 'P' && nvTabuleiro.LugarTabuleiro[7] == 'V')
+            if (nvTabuleiro.LugarTabuleiro[15] == z && nvTabuleiro.LugarTabuleiro[23] == z && nvTabuleiro.LugarTabuleiro[7] == 'V')
             {
                 return 7;
             }
@@ -822,13 +299,16 @@ namespace Trilha
         }
 
         //:: Coloca e movimenta uma peça no tabuleiro
-        public int IAColocarMovimentarPeca()
+        public Tuple<int, int> IAColocarMovimentarPeca()
         {
-            int ataque = IAFazerTrilha();
-            int defende = ataque > -1 ? -1 : IAVerificarTrilhaJogador();
-            //:: Fazer parte onde tem que movimentar uma peça
             //:: Não deixar pular mais
+            if (AI9pecas[8] != -1)
+            {
+                return IAJogarAleatorio();
+            }
 
+            int ataque = IAVerificarTrilha('P');
+            int defende = ataque > -1 ? -1 : IAVerificarTrilha('B');
 
             //:: Coloca peça em qualquer lugar no tabuleiro
             //:: Pular para fazer trilha ou defender
@@ -837,11 +317,8 @@ namespace Trilha
             //> se não tiver ataque ou defesa faz uma jogada qualquer
             if (ataque == -1 && defende == -1)
             {
-                if (IAJogarAleatorio() == 666)
-                {
-                    //> retorna 666 para avisar que tem movimentos
-                    return 666;
-                }
+                Mensagem = "Status: Esperando você jogar!!!";
+                return IAJogarAleatorio();
             }
             //> se tiver uma possibilidade de trilha faz
             else if (ataque != -1)
@@ -855,8 +332,8 @@ namespace Trilha
                         break;
                     }
                 }
-                //> retorna 1 para avisar que fez trilha
-                return 1;
+                Mensagem = "Status: IA fez uma trilha!!!";
+                return new Tuple<int, int>(ataque, -1);
             }
             //> se tiver possibilidade de defesa então defende
             else if (defende != -1)
@@ -870,10 +347,337 @@ namespace Trilha
                         break;
                     }
                 }
-                //> retorna 2 para avisar que fez uma defesa
-                return 2;
+                Mensagem = "Status: IA defendeu uma possivel trilha sua!!!";
+                return new Tuple<int, int>(defende, -1);
             }
             //> retorna quando não acontecer nada
+            //> isso não acontecerá
+            Mensagem = "Status: Não aconteceu nada não!!!";
+            return new Tuple<int, int>(-1, -1);
+        }
+
+        //:: IA verifica se tem peça em posição onde poderá defender ou fazer uma trilha
+        //:: Ou ainda se a posição está vazia para colocar uma peça
+        //> char(z) para defesa(B), ataque(P) ou vazio(V)
+        //> int(p) para posição onde tem que mover a peça
+        private int IALugarVazio(char z, int p)
+        {
+            switch (p)
+            {
+                #region Fora
+                case 0:
+                    if (nvTabuleiro.LugarTabuleiro[1] == z)
+                    {
+                        return 1;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[7] == z)
+                    {
+                        return 7;
+                    }
+                    break;
+                case 1:
+                    if (nvTabuleiro.LugarTabuleiro[0] == z)
+                    {
+                        return 0;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[2] == z)
+                    {
+                        return 2;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[9] == z)
+                    {
+                        return 9;
+                    }
+                    break;
+                case 2:
+                    if (nvTabuleiro.LugarTabuleiro[1] == z)
+                    {
+                        return 1;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[3] == z)
+                    {
+                        return 3;
+                    }
+                    break;
+                case 3:
+                    if (nvTabuleiro.LugarTabuleiro[2] == z)
+                    {
+                        return 2;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[4] == z)
+                    {
+                        return 4;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[11] == z)
+                    {
+                        return 11;
+                    }
+                    break;
+                case 4:
+                    if (nvTabuleiro.LugarTabuleiro[3] == z)
+                    {
+                        return 3;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[5] == z)
+                    {
+                        return 5;
+                    }
+                    break;
+                case 5:
+                    if (nvTabuleiro.LugarTabuleiro[4] == z)
+                    {
+                        return 4;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[6] == z)
+                    {
+                        return 6;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[13] == z)
+                    {
+                        return 13;
+                    }
+                    break;
+                case 6:
+                    if (nvTabuleiro.LugarTabuleiro[5] == z)
+                    {
+                        return 5;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[7] == z)
+                    {
+                        return 7;
+                    }
+                    break;
+                case 7:
+                    if (nvTabuleiro.LugarTabuleiro[6] == z)
+                    {
+                        return 6;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[0] == z)
+                    {
+                        return 0;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[15] == z)
+                    {
+                        return 15;
+                    }
+                    break;
+                #endregion
+
+                #region Meio
+                case 8:
+                    if (nvTabuleiro.LugarTabuleiro[15] == z)
+                    {
+                        return 15;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[9] == z)
+                    {
+                        return 9;
+                    }
+                    break;
+                case 9:
+                    if (nvTabuleiro.LugarTabuleiro[8] == z)
+                    {
+                        return 8;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[1] == z)
+                    {
+                        return 1;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[17] == z)
+                    {
+                        return 17;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[10] == z)
+                    {
+                        return 10;
+                    }
+                    break;
+                case 10:
+                    if (nvTabuleiro.LugarTabuleiro[9] == z)
+                    {
+                        return 9;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[11] == z)
+                    {
+                        return 11;
+                    }
+                    break;
+                case 11:
+                    if (nvTabuleiro.LugarTabuleiro[10] == z)
+                    {
+                        return 10;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[3] == z)
+                    {
+                        return 3;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[19] == z)
+                    {
+                        return 19;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[12] == z)
+                    {
+                        return 12;
+                    }
+                    break;
+                case 12:
+                    if (nvTabuleiro.LugarTabuleiro[11] == z)
+                    {
+                        return 11;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[13] == z)
+                    {
+                        return 13;
+                    }
+                    break;
+                case 13:
+                    if (nvTabuleiro.LugarTabuleiro[12] == z)
+                    {
+                        return 12;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[5] == z)
+                    {
+                        return 5;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[21] == z)
+                    {
+                        return 21;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[14] == z)
+                    {
+                        return 14;
+                    }
+                    break;
+                case 14:
+                    if (nvTabuleiro.LugarTabuleiro[13] == z)
+                    {
+                        return 13;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[15] == z)
+                    {
+                        return 15;
+                    }
+                    break;
+                case 15:
+                    if (nvTabuleiro.LugarTabuleiro[14] == z)
+                    {
+                        return 14;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[7] == z)
+                    {
+                        return 7;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[23] == z)
+                    {
+                        return 23;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[8] == z)
+                    {
+                        return 8;
+                    }
+                    break;
+                #endregion
+
+                #region Dentro
+                case 16:
+                    if (nvTabuleiro.LugarTabuleiro[23] == z)
+                    {
+                        return 23;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[17] == z)
+                    {
+                        return 17;
+                    }
+                    break;
+                case 17:
+                    if (nvTabuleiro.LugarTabuleiro[16] == z)
+                    {
+                        return 16;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[9] == z)
+                    {
+                        return 9;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[18] == z)
+                    {
+                        return 18;
+                    }
+                    break;
+                case 18:
+                    if (nvTabuleiro.LugarTabuleiro[17] == z)
+                    {
+                        return 17;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[19] == z)
+                    {
+                        return 19;
+                    }
+                    break;
+                case 19:
+                    if (nvTabuleiro.LugarTabuleiro[18] == z)
+                    {
+                        return 18;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[11] == z)
+                    {
+                        return 11;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[20] == z)
+                    {
+                        return 20;
+                    }
+                    break;
+                case 20:
+                    if (nvTabuleiro.LugarTabuleiro[19] == z)
+                    {
+                        return 19;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[21] == z)
+                    {
+                        return 21;
+                    }
+                    break;
+                case 21:
+                    if (nvTabuleiro.LugarTabuleiro[20] == z)
+                    {
+                        return 20;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[13] == z)
+                    {
+                        return 13;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[22] == z)
+                    {
+                        return 22;
+                    }
+                    break;
+                case 22:
+                    if (nvTabuleiro.LugarTabuleiro[21] == z)
+                    {
+                        return 21;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[23] == z)
+                    {
+                        return 23;
+                    }
+                    break;
+                case 23:
+                    if (nvTabuleiro.LugarTabuleiro[22] == z)
+                    {
+                        return 22;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[15] == z)
+                    {
+                        return 15;
+                    }
+                    if (nvTabuleiro.LugarTabuleiro[16] == z)
+                    {
+                        return 16;
+                    }
+                    break;
+                    #endregion
+            }
+            //:: Caso não tenha lugar para defesa, ataque ou vazio
             return -1;
         }
     }
