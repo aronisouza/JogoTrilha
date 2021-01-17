@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IAjoga.cs" />
+    <Compile Include="RegraJogo.cs" />
     <Compile Include="Tabuleiro.cs" />
     <Compile Include="Trilha.cs">
       <SubType>Form</SubType>

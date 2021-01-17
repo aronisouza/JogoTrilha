@@ -58,6 +58,7 @@ namespace Trilha
                 while (j == -1);
                 return new Tuple<int, int>(ret, -1);
             }
+            
             //:: Depois de colocar as 9 peças no tabuleiro
             //:: Movimentação das peças
             else
@@ -312,7 +313,7 @@ namespace Trilha
 
             //:: Coloca peça em qualquer lugar no tabuleiro
             //:: Pular para fazer trilha ou defender
-            //:: Abilitar isso apenas no inicio ou fim de partida quando a IA estiver apenas com 3 peças
+            //:: Habilitar isso apenas no inicio ou fim de partida quando a IA estiver apenas com 3 peças
 
             //> se não tiver ataque ou defesa faz uma jogada qualquer
             if (ataque == -1 && defende == -1)

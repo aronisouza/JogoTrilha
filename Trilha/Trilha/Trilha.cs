@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Trilha
@@ -37,6 +30,7 @@ namespace Trilha
 
         //:: Instância a classe tabuleiro
         Tabuleiro nvTabuleiro = new Tabuleiro();
+        RegraJogo nvRegraJogo = new RegraJogo();
 
         //:: Instância a classe IAJoga
         IAjoga nvIAJoga = new IAjoga();
@@ -84,16 +78,16 @@ namespace Trilha
             {
                 switch (mudar)
                 {
-                    case 0: pb1f.Image = nvTabuleiro.LugarTabuleiro[0] == 'V' ? null : nvTabuleiro.LugarTabuleiro[0] == 'B' ? Properties.Resources.branco : Properties.Resources.preto; break;
-                    case 1: pb2f.Image = nvTabuleiro.LugarTabuleiro[1] == 'V' ? null : nvTabuleiro.LugarTabuleiro[1] == 'B' ? Properties.Resources.branco : Properties.Resources.preto; break;
-                    case 2: pb3f.Image = nvTabuleiro.LugarTabuleiro[2] == 'V' ? null : nvTabuleiro.LugarTabuleiro[2] == 'B' ? Properties.Resources.branco : Properties.Resources.preto; break;
-                    case 3: pb4f.Image = nvTabuleiro.LugarTabuleiro[3] == 'V' ? null : nvTabuleiro.LugarTabuleiro[3] == 'B' ? Properties.Resources.branco : Properties.Resources.preto; break;
-                    case 4: pb5f.Image = nvTabuleiro.LugarTabuleiro[4] == 'V' ? null : nvTabuleiro.LugarTabuleiro[4] == 'B' ? Properties.Resources.branco : Properties.Resources.preto; break;
-                    case 5: pb6f.Image = nvTabuleiro.LugarTabuleiro[5] == 'V' ? null : nvTabuleiro.LugarTabuleiro[5] == 'B' ? Properties.Resources.branco : Properties.Resources.preto; break;
-                    case 6: pb7f.Image = nvTabuleiro.LugarTabuleiro[6] == 'V' ? null : nvTabuleiro.LugarTabuleiro[6] == 'B' ? Properties.Resources.branco : Properties.Resources.preto; break;
-                    case 7: pb8f.Image = nvTabuleiro.LugarTabuleiro[7] == 'V' ? null : nvTabuleiro.LugarTabuleiro[7] == 'B' ? Properties.Resources.branco : Properties.Resources.preto; break;
-                    case 8: pb1m.Image = nvTabuleiro.LugarTabuleiro[8] == 'V' ? null : nvTabuleiro.LugarTabuleiro[8] == 'B' ? Properties.Resources.branco : Properties.Resources.preto; break;
-                    case 9: pb2m.Image = nvTabuleiro.LugarTabuleiro[9] == 'V' ? null : nvTabuleiro.LugarTabuleiro[9] == 'B' ? Properties.Resources.branco : Properties.Resources.preto; break;
+                    case 0:  pb1f.Image = nvTabuleiro.LugarTabuleiro[0]  == 'V' ? null : nvTabuleiro.LugarTabuleiro[0]  == 'B' ? Properties.Resources.branco : Properties.Resources.preto; break;
+                    case 1:  pb2f.Image = nvTabuleiro.LugarTabuleiro[1]  == 'V' ? null : nvTabuleiro.LugarTabuleiro[1]  == 'B' ? Properties.Resources.branco : Properties.Resources.preto; break;
+                    case 2:  pb3f.Image = nvTabuleiro.LugarTabuleiro[2]  == 'V' ? null : nvTabuleiro.LugarTabuleiro[2]  == 'B' ? Properties.Resources.branco : Properties.Resources.preto; break;
+                    case 3:  pb4f.Image = nvTabuleiro.LugarTabuleiro[3]  == 'V' ? null : nvTabuleiro.LugarTabuleiro[3]  == 'B' ? Properties.Resources.branco : Properties.Resources.preto; break;
+                    case 4:  pb5f.Image = nvTabuleiro.LugarTabuleiro[4]  == 'V' ? null : nvTabuleiro.LugarTabuleiro[4]  == 'B' ? Properties.Resources.branco : Properties.Resources.preto; break;
+                    case 5:  pb6f.Image = nvTabuleiro.LugarTabuleiro[5]  == 'V' ? null : nvTabuleiro.LugarTabuleiro[5]  == 'B' ? Properties.Resources.branco : Properties.Resources.preto; break;
+                    case 6:  pb7f.Image = nvTabuleiro.LugarTabuleiro[6]  == 'V' ? null : nvTabuleiro.LugarTabuleiro[6]  == 'B' ? Properties.Resources.branco : Properties.Resources.preto; break;
+                    case 7:  pb8f.Image = nvTabuleiro.LugarTabuleiro[7]  == 'V' ? null : nvTabuleiro.LugarTabuleiro[7]  == 'B' ? Properties.Resources.branco : Properties.Resources.preto; break;
+                    case 8:  pb1m.Image = nvTabuleiro.LugarTabuleiro[8]  == 'V' ? null : nvTabuleiro.LugarTabuleiro[8]  == 'B' ? Properties.Resources.branco : Properties.Resources.preto; break;
+                    case 9:  pb2m.Image = nvTabuleiro.LugarTabuleiro[9]  == 'V' ? null : nvTabuleiro.LugarTabuleiro[9]  == 'B' ? Properties.Resources.branco : Properties.Resources.preto; break;
                     case 10: pb3m.Image = nvTabuleiro.LugarTabuleiro[10] == 'V' ? null : nvTabuleiro.LugarTabuleiro[10] == 'B' ? Properties.Resources.branco : Properties.Resources.preto; break;
                     case 11: pb4m.Image = nvTabuleiro.LugarTabuleiro[11] == 'V' ? null : nvTabuleiro.LugarTabuleiro[11] == 'B' ? Properties.Resources.branco : Properties.Resources.preto; break;
                     case 12: pb5m.Image = nvTabuleiro.LugarTabuleiro[12] == 'V' ? null : nvTabuleiro.LugarTabuleiro[12] == 'B' ? Properties.Resources.branco : Properties.Resources.preto; break;
@@ -110,8 +104,7 @@ namespace Trilha
                     case 23: pb8d.Image = nvTabuleiro.LugarTabuleiro[23] == 'V' ? null : nvTabuleiro.LugarTabuleiro[23] == 'B' ? Properties.Resources.branco : Properties.Resources.preto; break;
                     default: lbStatus.Text = "Status: Não foi alterado nada no tabuleiro"; break;
                 }
-                if (mudar == z) mudar = -1;
-                else mudar = z;
+                mudar = (mudar == z ? -1 : z);
             }
             while (mudar != -1);
         }
@@ -149,14 +142,24 @@ namespace Trilha
                 case "pb7d": i = 22; break;
                 case "pb8d": i = 23; break;
             }
+
+
+
             //:: Atualiza no tabuleiro a jagada da pessoa
-            nvTabuleiro.LugarTabuleiro[i] = 'B';
+            //nvTabuleiro.LugarTabuleiro[i] = 'B';
+            nvRegraJogo.JPlayer(i);
+            
             AttVisualTabuleiro(i, -1);
+
+
+
+
             //:: Chama a jogada da IA
             //:: Atualiza no tabuleiro a jogada da IA
-            Tuple<int, int> valores = nvIAJoga.IAColocarMovimentarPeca();
+            /*Tuple<int, int> valores = nvIAJoga.IAColocarMovimentarPeca();
+            
             AttVisualTabuleiro(valores.Item1, valores.Item2);
-            lbStatus.Text = nvIAJoga.Mensagem;
+            lbStatus.Text = nvIAJoga.Mensagem;*/
         }
         
         private void resetarJogo_Click(object sender, EventArgs e)
@@ -199,10 +202,12 @@ namespace Trilha
         {
             //:: se o reset estiver desligado bloqueia o botão
             if (!reset) return;
+            
             //::IA coloca 1ª peça 
             Tuple<int, int> valores = nvIAJoga.IAColocarMovimentarPeca();
             AttVisualTabuleiro(valores.Item1, valores.Item2);
             lbStatus.Text = nvIAJoga.Mensagem;
+            
             //:: alterações na interface
             btIniciarJogo.Text = "Clique com botão direito\r\nPara resetar\r\n o jogo!!!";
             resetarJogo.Enabled = true;
